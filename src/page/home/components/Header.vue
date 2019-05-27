@@ -33,10 +33,10 @@
     .header-left
       width .64rem
       float left
+
       .left-icon
         text-align center
         font-size .5rem
-
 
 
     .header-input
@@ -51,11 +51,11 @@
       line-height .64rem
 
 
-
     .header-right
       width 1.24rem
       float right
       text-align center
+
       .right-icon
         margin-right -.04rem
         font-size .24rem

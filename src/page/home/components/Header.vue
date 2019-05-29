@@ -7,10 +7,13 @@
       <span class="iconfont">&#xe615;</span>
       输入城市周边景点
     </div>
-    <div class="header-right">
-      {{address}}
-      <span class="iconfont right-icon">&#xe600;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{address}}
+        <span class="iconfont right-icon">&#xe600;</span>
+      </div>
+    </router-link>
+
   </div>
 </template>
 
@@ -28,8 +31,8 @@
 
   .header
     display flex
-    line-height .86rem
-    height .86rem
+    line-height $headerHeight
+    height $headerHeight
     background $bgColor
     color #fff
 
@@ -39,7 +42,7 @@
 
       .left-icon
         text-align center
-        font-size .5rem
+        font-size .6rem
 
 
     .header-input
@@ -58,6 +61,7 @@
       width 1.24rem
       float right
       text-align center
+      color white
 
       .right-icon
         margin-right -.04rem

@@ -1,18 +1,25 @@
 <template>
   <div>
-      <header-city/>
-      <city-search/>
+    <city-header/>
+    <city-search/>
+    <city-list/>
+    <city-xina/>
   </div>
 </template>
 
 <script>
-    import HeaderCity from './components/HeaderCity'
-    import CitySearch from './components/CitySearch'
+    import CityHeader from './components/Header'
+    import CitySearch from './components/Search'
+    import CityList from './components/List'
+    import CityXina from './components/Xina'
+
     export default {
         name: "city",
-        components:{
-            HeaderCity,
-            CitySearch
+        components: {
+            CityHeader,
+            CitySearch,
+            CityList,
+            CityXina
         }
     }
 </script>

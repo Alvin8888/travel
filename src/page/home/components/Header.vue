@@ -8,7 +8,7 @@
       输入城市周边景点
     </div>
     <div class="header-right">
-      城市
+      {{address}}
       <span class="iconfont right-icon">&#xe600;</span>
     </div>
   </div>
@@ -16,7 +16,10 @@
 
 <script>
     export default {
-        name: "HomeHeader"
+        name: "HomeHeader",
+        props:{
+            address:String
+        }
     }
 </script>
 

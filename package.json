@@ -11,6 +11,9 @@
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "fastclick": "^1.0.6",
+    "mock": "^0.1.1",
+    "mockjs": "^1.0.1-beta3",
+    "nodemon": "^1.19.1",
     "path": "^0.12.7",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
@@ -36,7 +39,9 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

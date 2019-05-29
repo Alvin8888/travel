@@ -19,55 +19,11 @@
 <script>
     export default {
         name: "HomeIcon",
+        props:{
+          list:Array
+        },
         data() {
             return {
-                iconList: [
-                    {
-                        id: '001',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                        desc: '热门景点'
-                    },
-                    {
-                        id: '002',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                        desc: '一日游'
-                    },
-                    {
-                        id: '003',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-                        desc: '成都必玩'
-                    },
-                    {
-                        id: '004',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
-                        desc: '川剧表演'
-                    },
-                    {
-                        id: '005',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                        desc: '热门景点'
-                    },
-                    {
-                        id: '006',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                        desc: '一日游'
-                    },
-                    {
-                        id: '007',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-                        desc: '成都必玩'
-                    },
-                    {
-                        id: '008',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
-                        desc: '川剧表演'
-                    },
-                    {
-                        id: '009',
-                        url: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
-                        desc: '自然风光'
-                    }
-                ],
                 swiperOption: {
                     pagination: '.swiper-pagination'
                 }
@@ -76,7 +32,7 @@
         computed: {
             pages() {
                 const pages = []
-                this.iconList.forEach((item, index) => {
+                this.list.forEach((item, index) => {
                     const page = Math.floor(index / 8)
                     if (!pages[page]) {
                         pages[page] = []

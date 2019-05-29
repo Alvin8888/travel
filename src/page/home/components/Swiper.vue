@@ -1,8 +1,8 @@
 <template>
   <div class="wrap">
-    <swiper :options="swiperOption" >
+    <swiper :options="swiperOption" v-if="isSwiper">
       <!-- slides -->
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+      <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img"
              :src='item.src'
              alt=""/>
@@ -17,6 +17,9 @@
 <script>
     export default {
         name: "HomeSwiper",
+        props:{
+          list:Array
+        },
         data() {
             return {
                 swiperOption: {
@@ -25,21 +28,12 @@
                     observer:true,//修改swiper自己或子元素时，自动初始化swiper
                     observeParents:true,//修改swiper的父元素时，自动初始化swiper
                     autoplay:3000
-                },
-                swiperList:[
-                    {
-                    id:'001',
-                    src:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/60904fc24f223e0db5aee3c6148e641f.jpg_750x200_b1b90a19.jpg'
-                },
-                    {
-                    id:'002',
-                    src:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg'
-                },
-                    {
-                    id:'003',
-                    src:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg'
-                },
-                ]
+                }
+            }
+        },
+        computed:{
+            isSwiper () {
+               return  this.list.length
             }
         }
     }

@@ -13,6 +13,7 @@
     import 'styles/border.css'
     import 'styles/iconfont/iconfont.css'
     import 'swiper/dist/css/swiper.css'
+    import '@/mock/mockServer'
 
     //解决移动端300毫秒延迟的插件
     fastClick.attach(document.body)

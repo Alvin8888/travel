@@ -41,7 +41,7 @@ module.exports = {
                 target: '',
 
                 // 如果要代理 websockets
-                ws: true,
+                ws: false,
                 // 将主机标头的原点更改为目标URL(设置跨域)
                 changeOrigin: true,
                 pathRewrite: {

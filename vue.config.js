@@ -26,7 +26,7 @@ module.exports = {
     // 输出文件目录
     // webpack-dev-server 相关配置
     devServer: {
-        open:true,
+        open:false,
         // 设置主机地址
         host: 'localhost',
         // 设置默认端口
